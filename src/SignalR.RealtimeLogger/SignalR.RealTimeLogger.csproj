@@ -244,17 +244,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SignalR.RealtimeLogger.Domain\SignalR.RealtimeLogger.Domain.csproj">
-      <Project>{D1642196-36A7-4FA4-9F3D-2305667F0CDF}</Project>
-      <Name>SignalR.RealtimeLogger.Domain</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SignalR.RealtimeLogger.Domain\SignalR.RealtimeLogger.Domain.csproj">
+      <Project>{d1642196-36a7-4fa4-9f3d-2305667f0cdf}</Project>
+      <Name>SignalR.RealtimeLogger.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

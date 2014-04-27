@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.RealTimeLogger", "src\SignalR.RealTimeLogger.csproj", "{9D161AFF-5FFD-4029-A87B-C9BE49E845CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.RealTimeLogger", "src\SignalR.RealTimeLogger\SignalR.RealTimeLogger.csproj", "{9D161AFF-5FFD-4029-A87B-C9BE49E845CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{8CBE87CF-DDCD-42C9-897B-FA74F4BFDBF3}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A2FABF
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.RealtimeLogger.Domain", "SignalR.RealtimeLogger.Domain\SignalR.RealtimeLogger.Domain.csproj", "{D1642196-36A7-4FA4-9F3D-2305667F0CDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.RealtimeLogger.Domain", "src\SignalR.RealtimeLogger.Domain\SignalR.RealtimeLogger.Domain.csproj", "{D1642196-36A7-4FA4-9F3D-2305667F0CDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
