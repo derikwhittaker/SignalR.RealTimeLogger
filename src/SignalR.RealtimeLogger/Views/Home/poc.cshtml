@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title></title>
+    </head>
+<body>
+    <div>
+        <input id="listenButton" type="button" value="Listen">
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.0.3.js"></script>
+    <script src="~/signalr/hubs"></script>
+    
+    <script>
+        var self = this;
+        var connectionId = "";
+        var logsHub = $.connection.logsHubController;
+
+
+        logsHub.client.newLog = function (log) {
+            console.log(log);
+        };
+        
+        $.connection.hub.start()
+            .done(function() {
+                console.log('Now connected, connection ID=' + $.connection.hub.id);
+                self.connectionId = $.connection.hub.id;
+            })
+            .fail(function () { console.log('Could not Connect!'); });
+
+        $("#listenButton").click(function () {
+            var route = "/api/logs/1234/listen?contextId=" + self.connectionId;
+            $.post(route)
+                .done(function() {
+                    console.log('Posted');
+                })
+                .fail(function(err) {
+                    console.log('failed' + err);
+                });
+        });
+
+    </script>
+</body>
+
+</html>
+

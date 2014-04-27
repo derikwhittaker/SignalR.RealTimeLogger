@@ -1,10 +1,11 @@
-﻿using System.Linq;
+﻿using System.Globalization;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using SignalR.RealTimeLogger.Controllers.signalR;
 using SignalR.RealtimeLogger.Domain.Services;
-using SignalR.RealTimeLogger.Hubs;
 
 namespace SignalR.RealTimeLogger.Controllers.api
 {
@@ -23,8 +24,9 @@ namespace SignalR.RealTimeLogger.Controllers.api
         {
             var logString = await Request.Content.ReadAsStringAsync();
             
-            await _logService.Log(logString);
-            
+            var log = await _logService.Log(logString);
+
+            HubContext.Clients.Group(log.SessionId.ToString(CultureInfo.InvariantCulture)).newLog(logString);
         }
 
         [Route("api/logs/{sessionId}/listen")]
@@ -39,7 +41,9 @@ namespace SignalR.RealTimeLogger.Controllers.api
 
             if (_logService.SessionExists(sessionId))
             {
-                //_logService.ListenToSession(sessionId)
+                var connectionId = queryStrings["contextId"];
+                HubContext.Groups.Add(connectionId, sessionId.ToString());
+
             }
 
             return Request.CreateResponse(HttpStatusCode.OK);

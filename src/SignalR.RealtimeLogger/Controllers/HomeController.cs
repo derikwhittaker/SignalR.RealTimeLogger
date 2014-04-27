@@ -14,5 +14,10 @@ namespace SignalR.RealTimeLogger.Controllers
 
             return View();
         }
+
+        public ActionResult Poc()
+        {
+            return View();
+        }
     }
 }
