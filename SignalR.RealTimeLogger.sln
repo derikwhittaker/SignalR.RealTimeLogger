@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.RealTimeLogger", "src\SignalR.RealTimeLogger.csproj", "{9D161AFF-5FFD-4029-A87B-C9BE49E845CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{8CBE87CF-DDCD-42C9-897B-FA74F4BFDBF3}"
+	ProjectSection(SolutionItems) = preProject
+		configuration\Gruntfile.js = configuration\Gruntfile.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A2FABFDE-BE56-4AB9-A997-6A2EE88EDDF5}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.RealtimeLogger.Domain", "SignalR.RealtimeLogger.Domain\SignalR.RealtimeLogger.Domain.csproj", "{D1642196-36A7-4FA4-9F3D-2305667F0CDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D161AFF-5FFD-4029-A87B-C9BE49E845CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D161AFF-5FFD-4029-A87B-C9BE49E845CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D161AFF-5FFD-4029-A87B-C9BE49E845CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D161AFF-5FFD-4029-A87B-C9BE49E845CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1642196-36A7-4FA4-9F3D-2305667F0CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1642196-36A7-4FA4-9F3D-2305667F0CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1642196-36A7-4FA4-9F3D-2305667F0CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1642196-36A7-4FA4-9F3D-2305667F0CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
